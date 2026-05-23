@@ -2,23 +2,30 @@
 
 Use this list when you are ready to replace placeholders with real memories.
 
-## Blue Lagoon, Croatia (seed drop)
+## Dates used (approximate where needed)
 
-- [ ] Confirm exact scatter **date** (currently `2025-09-12` placeholder)
+| Location | Date in site | Your note |
+|----------|--------------|-----------|
+| Blue Lagoon, Croatia | May 20, 2026 | Exact |
+| Dominican Republic | Feb 15, 2025 | Mid-February |
+| St. Croix | Feb 15, 2024 | Mid-February |
+| Turks & Caicos | May 15, 2023 | Mid-May |
+| Maldives | Feb 15, 2022 | Mid-February |
+| Key Largo, FL | Mar 15, 2021 | Mid-March |
+| Santa Cruz, CA | Dec 15, 2019 | Winter 2019 |
+
+Edit exact dates in `public/data/drops.json` if you want a specific day, then run `npm run drift`.
+
+## Blue Lagoon, Croatia (latest chapter)
+
+- [ ] Confirm exact scatter **date** (currently `2026-05-20`)
 - [ ] Confirm map pin — Krknjaši / Drvenik Veli near Trogir (~43.454°N, 16.140°E)
 - [ ] Add 1–3 sentence **memory** in `public/data/drops.json`
 - [ ] Optional photo → `public/photos/blue-lagoon.jpg` (strip EXIF first), set `"photo": "photos/blue-lagoon.jpg"`
 
-## Other drops (replace placeholders)
+## Personal memories
 
-Edit `placeholder-drop-2` and `placeholder-drop-3` in `public/data/drops.json`:
-
-- [ ] Place name and region
-- [ ] Latitude / longitude (Google Maps pin is fine)
-- [ ] Scatter date (`YYYY-MM-DD`)
-- [ ] Personal note
-- [ ] Optional photo
-- [ ] Drift direction/speed if you know the regional current (or leave defaults)
+Add or edit the `story` field for each drop in `public/data/drops.json`. Optional photos go in `public/photos/`.
 
 After editing:
 

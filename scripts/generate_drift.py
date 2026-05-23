@@ -39,7 +39,8 @@ def destination_point(lat: float, lng: float, bearing_deg: float, distance_km: f
 
 
 def describe_region(lat: float, lng: float) -> str:
-    """Plain-language Adriatic/Mediterranean region labels for accessibility."""
+    """Plain-language region labels for accessibility."""
+    # Adriatic / Mediterranean
     if 44.0 <= lat <= 45.8 and 13.0 <= lng <= 16.5:
         return "the northern Adriatic, along the Istrian and Dalmatian coast"
     if 43.5 <= lat <= 44.2 and 15.0 <= lng <= 17.0:
@@ -52,15 +53,52 @@ def describe_region(lat: float, lng: float) -> str:
         return "the southern Adriatic"
     if 40.0 <= lat <= 42.5 and 12.0 <= lng <= 16.0:
         return "the Tyrrhenian Sea off western Italy"
-    if 39.0 <= lat <= 42.0 and 16.0 <= lng <= 20.0:
-        return "the Ionian Sea"
     if lat > 45.0 and lng < 14.0:
         return "the Gulf of Trieste and northern Adriatic"
-    if lat > 45.0:
-        return "northern Adriatic waters"
-    if lat < 39.0 and lng < 10.0:
-        return "the western Mediterranean"
-    return "open Mediterranean waters"
+    if 35.0 <= lat <= 45.0 and -6.0 <= lng <= 20.0:
+        return "the Mediterranean Sea"
+
+    # Caribbean
+    if 10.0 <= lat <= 28.0 and -85.0 <= lng <= -60.0:
+        if lng > -68.0:
+            return "the eastern Caribbean, near the Greater Antilles"
+        if lat > 24.0:
+            return "the northern Caribbean, toward the Bahamas"
+        return "the central Caribbean"
+
+    # US Atlantic / Gulf
+    if 24.0 <= lat <= 36.0 and -82.0 <= lng <= -74.0:
+        return "the Atlantic off the southeastern United States"
+    if 24.0 <= lat <= 31.0 and -85.0 <= lng <= -79.0:
+        return "the Gulf of Mexico or Florida Straits"
+
+    # California / NE Pacific
+    if 30.0 <= lat <= 42.0 and -130.0 <= lng <= -117.0:
+        return "the Pacific off the California and Baja coast"
+    if 10.0 <= lat <= 30.0 and -120.0 <= lng <= -90.0:
+        return "the eastern tropical Pacific"
+
+    # Indian Ocean
+    if -5.0 <= lat <= 10.0 and 55.0 <= lng <= 80.0:
+        return "the central Indian Ocean"
+    if -5.0 <= lat <= 10.0 and 40.0 <= lng <= 55.0:
+        return "the western Indian Ocean, off East Africa"
+    if lat <= 5.0 and lng >= 70.0:
+        return "the waters near the Maldives and Laccadive Sea"
+
+    # General Atlantic
+    if 0.0 <= lat <= 40.0 and -60.0 <= lng <= -20.0:
+        return "the open Atlantic Ocean"
+    if lat >= 40.0 and -60.0 <= lng <= -10.0:
+        return "the North Atlantic"
+
+    # General Pacific
+    if lat >= 0.0 and lng <= -120.0:
+        return "the North Pacific"
+    if lat < 0.0 and lng <= -100.0:
+        return "the South Pacific"
+
+    return "open ocean waters"
 
 
 def build_path(drop: dict, end: date) -> dict:
@@ -77,10 +115,15 @@ def build_path(drop: dict, end: date) -> dict:
     coordinates: list[list[float]] = [[lng, lat]]
 
     current = start
+    total_days = (end - start).days
+    step = 1 if total_days <= 120 else 7
+
     while current <= end:
-        lat, lng = destination_point(lat, lng, bearing, speed)
+        days_to_advance = min(step, (end - current).days + 1)
+        for _ in range(days_to_advance):
+            lat, lng = destination_point(lat, lng, bearing, speed)
         coordinates.append([round(lng, 5), round(lat, 5)])
-        current = date.fromordinal(current.toordinal() + 1)
+        current = date.fromordinal(current.toordinal() + days_to_advance)
 
     region = describe_region(lat, lng)
     days = (end - start).days

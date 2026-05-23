@@ -35,6 +35,7 @@ async function main() {
     const map = new JourneyMap('map');
     map.init();
     map.renderDrops(data.drops, pathFeatures);
+    map.focusDrop(latest.id);
 
     renderTimeline(data.drops, pathByDropId, latest.id, (dropId) => {
       map.focusDrop(dropId);

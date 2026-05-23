@@ -17,7 +17,7 @@
       "region": "Croatia",
       "lat": 43.4544,
       "lng": 16.1403,
-      "date": "2025-09-12",
+      "date": "2026-05-20",
       "story": "We released Mom at Blue Lagoon, Croatia\u2014a turquoise cove she had always wanted to see. The water was exactly the color she had hoped for.",
       "photo": null,
       "pathFile": "paths/blue-lagoon-croatia.geojson",
@@ -29,37 +29,105 @@
       }
     },
     {
-      "id": "placeholder-drop-2",
-      "label": "Second Drop",
-      "region": "Update region",
-      "lat": 44.8176,
-      "lng": 20.4633,
-      "date": "2024-06-01",
-      "story": "Replace this placeholder with your second scatter location, date, and memory.",
+      "id": "dominican-republic",
+      "label": "Dominican Republic",
+      "region": "Caribbean",
+      "lat": 18.5601,
+      "lng": -68.3725,
+      "date": "2025-02-15",
+      "story": "Released in the warm Caribbean waters off the Dominican Republic.",
       "photo": null,
-      "pathFile": "paths/placeholder-drop-2.geojson",
+      "pathFile": "paths/dominican-republic.geojson",
       "driftMeta": {
-        "currentName": "Regional surface current",
-        "direction": "N",
-        "bearingDeg": 0,
-        "speedKmDay": 1.5
+        "currentName": "Caribbean surface current",
+        "direction": "NW",
+        "bearingDeg": 325,
+        "speedKmDay": 1.0
       }
     },
     {
-      "id": "placeholder-drop-3",
-      "label": "Third Drop",
-      "region": "Update region",
-      "lat": 41.9028,
-      "lng": 12.4964,
-      "date": "2023-05-15",
-      "story": "Replace this placeholder with your third scatter location, date, and memory.",
+      "id": "st-croix",
+      "label": "St. Croix",
+      "region": "U.S. Virgin Islands",
+      "lat": 17.7465,
+      "lng": -64.7035,
+      "date": "2024-02-15",
+      "story": "Released in the waters around St. Croix.",
       "photo": null,
-      "pathFile": "paths/placeholder-drop-3.geojson",
+      "pathFile": "paths/st-croix.geojson",
       "driftMeta": {
-        "currentName": "Regional surface current",
-        "direction": "SE",
-        "bearingDeg": 135,
-        "speedKmDay": 1.8
+        "currentName": "Caribbean surface current",
+        "direction": "NW",
+        "bearingDeg": 320,
+        "speedKmDay": 1.0
+      }
+    },
+    {
+      "id": "turks-and-caicos",
+      "label": "Turks & Caicos",
+      "region": "Caribbean",
+      "lat": 21.7945,
+      "lng": -72.1825,
+      "date": "2023-05-15",
+      "story": "Released in the turquoise waters of Turks & Caicos.",
+      "photo": null,
+      "pathFile": "paths/turks-and-caicos.geojson",
+      "driftMeta": {
+        "currentName": "Caribbean surface current",
+        "direction": "NW",
+        "bearingDeg": 330,
+        "speedKmDay": 1.0
+      }
+    },
+    {
+      "id": "maldives",
+      "label": "Maldives",
+      "region": "Indian Ocean",
+      "lat": 4.2105,
+      "lng": 73.528,
+      "date": "2022-02-15",
+      "story": "Released in the clear waters of the Maldives.",
+      "photo": null,
+      "pathFile": "paths/maldives.geojson",
+      "driftMeta": {
+        "currentName": "Equatorial Indian Ocean drift",
+        "direction": "W",
+        "bearingDeg": 260,
+        "speedKmDay": 0.8
+      }
+    },
+    {
+      "id": "key-largo",
+      "label": "Key Largo",
+      "region": "Florida",
+      "lat": 25.0865,
+      "lng": -80.4473,
+      "date": "2021-03-15",
+      "story": "Released in the waters off Key Largo, Florida.",
+      "photo": null,
+      "pathFile": "paths/key-largo.geojson",
+      "driftMeta": {
+        "currentName": "Florida Current",
+        "direction": "NE",
+        "bearingDeg": 45,
+        "speedKmDay": 1.2
+      }
+    },
+    {
+      "id": "santa-cruz-ca",
+      "label": "Santa Cruz",
+      "region": "California",
+      "lat": 36.9517,
+      "lng": -122.0267,
+      "date": "2019-12-15",
+      "story": "Released in the Pacific off Santa Cruz, California\u2014one winter day by the Monterey Bay.",
+      "photo": null,
+      "pathFile": "paths/santa-cruz-ca.geojson",
+      "driftMeta": {
+        "currentName": "California Current",
+        "direction": "S",
+        "bearingDeg": 180,
+        "speedKmDay": 0.9
       }
     }
   ]
