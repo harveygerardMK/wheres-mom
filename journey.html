@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Full journey timeline of scatter locations and estimated drift paths." />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>Journey — Where's Mom</title>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header" data-site-header></header>
+
+    <main id="main" class="page-shell">
+      <div class="page-hero">
+        <h1>Her journey</h1>
+        <p>Each chapter marks a release on the water. Select a drop to see its story and estimated path since that day.</p>
+      </div>
+
+      <div class="journey-layout">
+        <div class="journey-map-wrap">
+          <div id="map" role="application" aria-label="Journey map"></div>
+        </div>
+        <div>
+          <div class="timeline-rail" data-timeline aria-label="Drop timeline"></div>
+          <div data-drop-detail style="margin-top: 1rem"></div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="site-footer" data-site-footer></footer>
+    <script type="module" src="/src/journey.js"></script>
+  </body>
+</html>

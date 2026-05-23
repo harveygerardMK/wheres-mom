@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Following Mom's journey across the sea — estimated paths shaped by tides and currents, shared with family." />
+    <meta property="og:title" content="Where's Mom — Her journey on the water" />
+    <meta property="og:description" content="A family map of scatter moments and estimated drift paths across the sea." />
+    <meta property="og:type" content="website" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>Where's Mom</title>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header" data-site-header></header>
+
+    <main id="main" class="home-layout">
+      <section class="map-panel" aria-label="Journey map">
+        <div id="map" role="application" aria-label="Map showing scatter locations and estimated drift paths"></div>
+        <div class="map-legend" aria-label="Map legend">
+          <strong>Chart key</strong>
+          <ul>
+            <li><span class="legend-swatch legend-swatch--drop" aria-hidden="true"></span> Release point</li>
+            <li><span class="legend-swatch legend-swatch--path" aria-hidden="true"></span> Estimated drift path</li>
+            <li><span class="legend-swatch legend-swatch--today" aria-hidden="true"></span> Approx. today</li>
+          </ul>
+          <p class="disclaimer-chip">These paths are thoughtful estimates for remembrance, not exact locations. The sea keeps its own secrets.</p>
+        </div>
+      </section>
+
+      <aside class="position-summary" data-position-summary aria-live="polite">
+        <p class="loading">Loading journey…</p>
+      </aside>
+
+      <section class="bottom-sheet" data-bottom-sheet aria-label="Journey timeline">
+        <div class="bottom-sheet__handle" data-sheet-handle aria-hidden="true"><span></span></div>
+        <div class="bottom-sheet__header">
+          <h2>Journey</h2>
+          <a class="btn" href="./journey.html">Full journey</a>
+        </div>
+        <div class="bottom-sheet__content">
+          <div data-featured-chapter></div>
+          <div class="timeline-rail" data-timeline aria-label="Drop timeline"></div>
+        </div>
+      </section>
+    </main>
+
+    <noscript>
+      <section class="page-shell">
+        <h1>Where's Mom</h1>
+        <p>This map needs JavaScript. Visit the <a href="./journey.html">Journey page</a> for drop details, or enable JavaScript to see the map.</p>
+      </section>
+    </noscript>
+
+    <footer class="site-footer" data-site-footer></footer>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

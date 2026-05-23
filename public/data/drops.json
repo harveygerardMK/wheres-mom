@@ -1,0 +1,66 @@
+{
+  "person": {
+    "displayName": "Mom",
+    "fullName": "",
+    "born": "",
+    "died": ""
+  },
+  "site": {
+    "title": "Where's Mom",
+    "subtitle": "Her journey on the water",
+    "lastUpdated": "2026-05-23"
+  },
+  "drops": [
+    {
+      "id": "blue-lagoon-croatia",
+      "label": "Blue Lagoon",
+      "region": "Croatia",
+      "lat": 43.4544,
+      "lng": 16.1403,
+      "date": "2025-09-12",
+      "story": "We released Mom at Blue Lagoon, Croatia\u2014a turquoise cove she had always wanted to see. The water was exactly the color she had hoped for.",
+      "photo": null,
+      "pathFile": "paths/blue-lagoon-croatia.geojson",
+      "driftMeta": {
+        "currentName": "Adriatic coastal current",
+        "direction": "NW",
+        "bearingDeg": 315,
+        "speedKmDay": 0.75
+      }
+    },
+    {
+      "id": "placeholder-drop-2",
+      "label": "Second Drop",
+      "region": "Update region",
+      "lat": 44.8176,
+      "lng": 20.4633,
+      "date": "2024-06-01",
+      "story": "Replace this placeholder with your second scatter location, date, and memory.",
+      "photo": null,
+      "pathFile": "paths/placeholder-drop-2.geojson",
+      "driftMeta": {
+        "currentName": "Regional surface current",
+        "direction": "N",
+        "bearingDeg": 0,
+        "speedKmDay": 1.5
+      }
+    },
+    {
+      "id": "placeholder-drop-3",
+      "label": "Third Drop",
+      "region": "Update region",
+      "lat": 41.9028,
+      "lng": 12.4964,
+      "date": "2023-05-15",
+      "story": "Replace this placeholder with your third scatter location, date, and memory.",
+      "photo": null,
+      "pathFile": "paths/placeholder-drop-3.geojson",
+      "driftMeta": {
+        "currentName": "Regional surface current",
+        "direction": "SE",
+        "bearingDeg": 135,
+        "speedKmDay": 1.8
+      }
+    }
+  ]
+}

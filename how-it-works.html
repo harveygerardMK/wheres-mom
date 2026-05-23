@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="How estimated drift paths are calculated for remembrance." />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>How it works — Where's Mom</title>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header" data-site-header></header>
+
+    <main id="main" class="page-shell page-shell--narrow">
+      <div class="page-hero">
+        <h1>How drift is estimated</h1>
+        <p>A plain-language guide to what this map shows — and what it does not.</p>
+      </div>
+
+      <div class="prose">
+        <p>
+          When ashes are released on the water, they disperse and move with surface currents, wind, and tides. This site
+          draws a gentle, estimated path from each release point forward in time — a way to imagine where Mom's journey
+          may have carried her, not a precise GPS location.
+        </p>
+
+        <div class="diagram" aria-label="Drift estimation diagram">
+Release point (known)
+    |
+    |  daily step along regional current
+    v
+Estimated path (dashed line on map)
+    |
+    v
+"Approx. today" marker (poetic guide, not exact)
+        </div>
+
+        <h2>What we use</h2>
+        <ul>
+          <li>The date and coordinates of each scatter</li>
+          <li>Typical surface current direction and speed for that sea region</li>
+          <li>A simple daily step model, recomputed when new drops are added</li>
+        </ul>
+
+        <h2>What we do not claim</h2>
+        <ul>
+          <li>Exact real-time location</li>
+          <li>Scientific survey accuracy</li>
+          <li>That the path follows a single ash particle</li>
+        </ul>
+
+        <p class="disclaimer-chip">
+          These paths are thoughtful estimates for remembrance, not exact locations. The sea keeps its own secrets.
+        </p>
+      </div>
+    </main>
+
+    <footer class="site-footer" data-site-footer></footer>
+    <script type="module" src="/src/how.js"></script>
+  </body>
+</html>
