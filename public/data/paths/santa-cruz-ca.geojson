@@ -2,7 +2,7 @@
   "type": "Feature",
   "properties": {
     "dropId": "santa-cruz-ca",
-    "label": "Santa Cruz",
+    "label": "Santa Cruz, CA",
     "startDate": "2019-12-15",
     "endDate": "2026-05-23",
     "daysElapsed": 2351,

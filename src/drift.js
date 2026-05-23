@@ -21,9 +21,10 @@ export function renderPositionSummary(pathProps, drop) {
 
 export function renderDropCard(drop, { active = false, pathProps = null } = {}) {
   const driftHint = pathProps ? ` · est. ${pathProps.estimatedRegion}` : '';
+  const ariaCurrent = active ? ' aria-current="true"' : '';
 
   return `
-    <button type="button" class="drop-card" data-drop-id="${drop.id}" aria-current="${active}">
+    <button type="button" class="drop-card" data-drop-id="${drop.id}"${ariaCurrent}>
       <h3>${drop.label}</h3>
       <p class="drop-meta">
         <time datetime="${drop.date}">${formatDate(drop.date)}</time> · ${drop.region}${driftHint}

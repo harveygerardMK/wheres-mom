@@ -118,6 +118,8 @@ def describe_region(lat: float, lng: float) -> str:
         return "the Atlantic off the southeastern United States"
     if 24.0 <= lat <= 31.0 and -85.0 <= lng <= -79.0:
         return "the Gulf of Mexico or Florida Straits"
+    if 18.0 <= lat <= 31.0 and -98.0 <= lng <= -85.0:
+        return "the Gulf of Mexico"
     if 30.0 <= lat <= 42.0 and -130.0 <= lng <= -117.0:
         return "the Pacific off the California and Baja coast"
     if 10.0 <= lat <= 30.0 and -120.0 <= lng <= -90.0:

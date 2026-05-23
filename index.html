@@ -7,6 +7,7 @@
     <meta property="og:title" content="Where's Mom — Her journey on the water" />
     <meta property="og:description" content="A family map of scatter moments and estimated drift paths across the sea." />
     <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://harveygerardmk.github.io/wheres-mom/favicon.svg" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <title>Where's Mom</title>
   </head>
@@ -29,17 +30,16 @@
         </div>
       </section>
 
-      <aside class="position-summary" data-position-summary aria-live="polite">
-        <p class="loading">Loading journey…</p>
-      </aside>
-
       <section class="bottom-sheet" data-bottom-sheet aria-label="Journey timeline">
-        <div class="bottom-sheet__handle" data-sheet-handle aria-hidden="true"><span></span></div>
+        <div class="bottom-sheet__handle" data-sheet-handle aria-label="Resize journey panel"><span></span></div>
         <div class="bottom-sheet__header">
           <h2>Journey</h2>
           <a class="btn" href="./journey.html">Full journey</a>
         </div>
         <div class="bottom-sheet__content">
+          <aside class="position-summary position-summary--sidebar" data-position-summary aria-live="polite">
+            <p class="loading">Loading journey…</p>
+          </aside>
           <div class="timeline-rail" data-timeline aria-label="Drop timeline"></div>
         </div>
       </section>

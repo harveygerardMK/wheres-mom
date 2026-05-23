@@ -23,6 +23,10 @@ export function renderTimeline(drops, pathByDropId, activeDropId, onSelect) {
 
 export function setActiveTimelineCard(dropId) {
   document.querySelectorAll('[data-drop-id]').forEach((button) => {
-    button.setAttribute('aria-current', button.getAttribute('data-drop-id') === dropId);
+    if (button.getAttribute('data-drop-id') === dropId) {
+      button.setAttribute('aria-current', 'true');
+    } else {
+      button.removeAttribute('aria-current');
+    }
   });
 }

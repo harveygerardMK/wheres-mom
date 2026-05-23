@@ -278,6 +278,12 @@ a:hover {
   border-top: 1px solid rgba(11, 42, 60, 0.08);
 }
 
+.position-summary--sidebar {
+  margin-bottom: 1rem;
+  border-radius: var(--radius);
+  border-top: none;
+}
+
 .position-summary h2 {
   margin: 0 0 0.35rem;
   font-family: var(--font-display);
@@ -339,60 +345,6 @@ a:hover {
   padding: 0 1.25rem 1.25rem;
 }
 
-.chapter-card {
-  padding: 1.25rem;
-  margin-bottom: 1rem;
-  border-radius: var(--radius);
-  background: var(--sand);
-  box-shadow: var(--shadow-lift);
-}
-
-.chapter-card--featured {
-  border-left: 4px solid var(--lagoon);
-}
-
-.chapter-card__badge {
-  display: inline-block;
-  margin-bottom: 0.5rem;
-  padding: 0.2rem 0.55rem;
-  border-radius: 999px;
-  background: var(--lagoon);
-  color: var(--ocean-deep);
-  font-family: var(--font-mono);
-  font-size: 0.7rem;
-  font-weight: 500;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-}
-
-.chapter-card h3 {
-  margin: 0 0 0.25rem;
-  font-family: var(--font-display);
-  font-size: 1.5rem;
-}
-
-.chapter-card .chapter-date {
-  margin: 0 0 0.75rem;
-  font-family: var(--font-mono);
-  font-size: 0.85rem;
-  color: var(--ocean-mid);
-}
-
-.chapter-card p {
-  margin: 0 0 0.75rem;
-}
-
-.chapter-card__footer {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem 1rem;
-  padding-top: 0.75rem;
-  border-top: 1px solid rgba(11, 42, 60, 0.08);
-  font-family: var(--font-mono);
-  font-size: 0.78rem;
-  color: var(--ocean-mid);
-}
-
 .drop-card {
   display: block;
   width: 100%;
@@ -432,11 +384,6 @@ a:hover {
   font-family: var(--font-mono);
   font-size: 0.78rem;
   color: var(--ocean-mid);
-}
-
-.drop-card .drop-story {
-  margin: 0.5rem 0 0;
-  font-size: 0.95rem;
 }
 
 .timeline-rail {
@@ -511,22 +458,6 @@ a:hover {
 
 .prose ul {
   padding-left: 1.25rem;
-}
-
-.about-photo {
-  width: min(100%, 18rem);
-  margin: 0 0 1.5rem;
-  border-radius: var(--radius);
-  overflow: hidden;
-  box-shadow: var(--shadow-soft);
-  aspect-ratio: 3 / 4;
-  background: var(--sand);
-}
-
-.about-photo img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
 }
 
 .dedication {
@@ -720,10 +651,6 @@ a:hover {
 
   #map {
     height: calc(100dvh - var(--header-height));
-  }
-
-  .position-summary {
-    display: none;
   }
 
   .bottom-sheet {
