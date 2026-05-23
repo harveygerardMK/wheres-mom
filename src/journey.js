@@ -3,6 +3,7 @@ import { renderDropDetail } from './drift.js';
 import { initLayout } from './layout.js';
 import { JourneyMap } from './map.js';
 import { renderTimeline, setActiveTimelineCard } from './timeline.js';
+import { initTodayBanner, setActiveTodayChip, clearActiveTodayChips } from './today-banner.js';
 import { getDropFromHash, loadDrops, loadPath } from './utils.js';
 
 async function main() {
@@ -27,6 +28,7 @@ async function main() {
       activeId = dropId;
       map.focusDrop(dropId);
       setActiveTimelineCard(dropId);
+      setActiveTodayChip(dropId);
       const drop = data.drops.find((item) => item.id === dropId);
       const pathProps = pathByDropId.get(dropId)?.properties;
       if (detailEl && drop) {
@@ -34,6 +36,14 @@ async function main() {
       }
       window.history.replaceState(null, '', `#drop=${dropId}`);
     };
+
+    initTodayBanner(data.drops, pathByDropId, {
+      onSelectDrop: showDrop,
+      onShowAll: () => {
+        clearActiveTodayChips();
+        map.fitAllToday();
+      },
+    });
 
     renderTimeline(data.drops, pathByDropId, activeId, showDrop);
     showDrop(activeId);

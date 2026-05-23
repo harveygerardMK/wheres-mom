@@ -27,26 +27,6 @@ Edit exact dates in `public/data/drops.json` if you want a specific day, then ru
 
 Add or edit the `story` field for each drop in `public/data/drops.json`. Optional photos go in `public/photos/`.
 
-After editing:
-
-```bash
-npm run drift
-git add public/data/
-git commit -m "Update drop memories"
-git push
-```
-
-## About Mom page
-
-Edit `about.html` or wire dynamic content later:
-
-- [ ] Display name (`Mom` vs first name) in `public/data/drops.json` → `person.displayName`
-- [ ] Birth and passing dates → `person.born`, `person.died`
-- [ ] 150–300 word biography
-- [ ] Portrait photo
-
-## Share with family
-
 Once deployed: `https://<your-github-username>.github.io/wheres-mom/`
 
 Suggested message:

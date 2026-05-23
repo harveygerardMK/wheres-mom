@@ -3,6 +3,7 @@ import { renderChapterCard, renderPositionSummary } from './drift.js';
 import { initBottomSheet, initLayout } from './layout.js';
 import { JourneyMap } from './map.js';
 import { renderTimeline, setActiveTimelineCard } from './timeline.js';
+import { initTodayBanner, setActiveTodayChip, clearActiveTodayChips } from './today-banner.js';
 import { loadDrops, loadPath } from './utils.js';
 
 async function main() {
@@ -35,9 +36,8 @@ async function main() {
     const map = new JourneyMap('map');
     map.init();
     map.renderDrops(data.drops, pathFeatures);
-    map.focusDrop(latest.id);
 
-    renderTimeline(data.drops, pathByDropId, latest.id, (dropId) => {
+    const selectDrop = (dropId) => {
       map.focusDrop(dropId);
       setActiveTimelineCard(dropId);
       const drop = data.drops.find((item) => item.id === dropId);
@@ -45,15 +45,27 @@ async function main() {
       if (positionEl && drop) {
         positionEl.innerHTML = renderPositionSummary(pathProps, drop);
       }
+      setActiveTodayChip(dropId);
+    };
+
+    initTodayBanner(data.drops, pathByDropId, {
+      onSelectDrop: selectDrop,
+      onShowAll: () => {
+        clearActiveTodayChips();
+        map.fitAllToday();
+      },
     });
+
+    selectDrop(latest.id);
+
+    renderTimeline(data.drops, pathByDropId, latest.id, selectDrop);
 
     initBottomSheet();
 
     if (window.location.hash.startsWith('#drop=')) {
       const id = window.location.hash.replace('#drop=', '');
       if (pathByDropId.has(id)) {
-        map.focusDrop(id);
-        setActiveTimelineCard(id);
+        selectDrop(id);
       }
     }
   } catch (error) {

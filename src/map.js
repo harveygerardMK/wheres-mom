@@ -123,15 +123,36 @@ export class JourneyMap {
         weight: active ? 4 : 2,
         opacity: active ? 0.95 : 0.45,
       });
-      if (active) {
-        todayMarker.addTo(this.layers.today);
-      } else {
-        this.layers.today.removeLayer(todayMarker);
-      }
+      todayMarker.addTo(this.layers.today);
+      todayMarker.setOpacity(active ? 1 : 0.65);
+      todayMarker.setZIndexOffset(active ? 1000 : 0);
     });
 
     const bounds = L.latLngBounds(record.coords);
     this.map.flyToBounds(bounds, { padding: [48, 48], duration: prefersReducedMotion() ? 0 : 1.2 });
+  }
+
+  fitAllToday() {
+    const todayCoords = [];
+    this.pathRecords.forEach(({ todayMarker }) => {
+      todayCoords.push(todayMarker.getLatLng());
+    });
+    if (todayCoords.length === 0) return;
+
+    this.pathRecords.forEach(({ marker, polyline, todayMarker }) => {
+      marker.setIcon(this.createDropIcon(false));
+      polyline.setStyle({ color: '#6EC4C4', weight: 2, opacity: 0.55 });
+      todayMarker.addTo(this.layers.today);
+      todayMarker.setOpacity(1);
+      todayMarker.setZIndexOffset(500);
+    });
+    this.activeDropId = null;
+
+    this.map.flyToBounds(L.latLngBounds(todayCoords), {
+      padding: [64, 64],
+      duration: prefersReducedMotion() ? 0 : 1.2,
+      maxZoom: 4,
+    });
   }
 
   fitAll() {

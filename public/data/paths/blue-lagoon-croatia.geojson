@@ -10,8 +10,9 @@
     "currentName": "Adriatic coastal current",
     "direction": "NW",
     "speedKmDay": 0.75,
-    "lastLat": 43.4735,
-    "lastLng": 16.114
+    "lastLat": 43.4663,
+    "lastLng": 16.1146,
+    "onOcean": true
   },
   "geometry": {
     "type": "LineString",
@@ -29,12 +30,12 @@
         43.46394
       ],
       [
-        16.12059,
-        43.46871
+        16.12387,
+        43.46632
       ],
       [
-        16.11401,
-        43.47348
+        16.11458,
+        43.46632
       ]
     ]
   }

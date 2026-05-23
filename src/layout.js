@@ -3,7 +3,6 @@ import { assetUrl } from './utils.js';
 export function initLayout({ currentPage = 'home', site, person }) {
   const title = site?.title ?? "Where's Mom";
   const subtitle = site?.subtitle ?? 'Her journey on the water';
-  const displayName = person?.displayName ?? 'Mom';
 
   document.title =
     currentPage === 'home' ? `${title} — ${subtitle}` : `${pageTitle(currentPage)} — ${title}`;
@@ -18,7 +17,6 @@ export function initLayout({ currentPage = 'home', site, person }) {
       <nav class="site-nav" aria-label="Main">
         <a href="${assetUrl('index.html')}" ${currentPage === 'home' ? 'aria-current="page"' : ''}>Home</a>
         <a href="${assetUrl('journey.html')}" ${currentPage === 'journey' ? 'aria-current="page"' : ''}>Journey</a>
-        <a href="${assetUrl('about.html')}" ${currentPage === 'about' ? 'aria-current="page"' : ''}>About ${displayName}</a>
         <a href="${assetUrl('how-it-works.html')}" ${currentPage === 'how' ? 'aria-current="page"' : ''}>How it works</a>
       </nav>
     `;
@@ -37,7 +35,6 @@ export function initLayout({ currentPage = 'home', site, person }) {
 function pageTitle(page) {
   const titles = {
     journey: 'Journey',
-    about: 'About',
     how: 'How it works',
   };
   return titles[page] ?? 'Home';
