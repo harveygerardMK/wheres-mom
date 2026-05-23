@@ -18,7 +18,6 @@
       "lat": 43.4544,
       "lng": 16.1403,
       "date": "2026-05-20",
-      "story": "We released Mom at Blue Lagoon, Croatia\u2014a turquoise cove she had always wanted to see. The water was exactly the color she had hoped for.",
       "photo": null,
       "pathFile": "paths/blue-lagoon-croatia.geojson",
       "driftMeta": {
@@ -35,7 +34,6 @@
       "lat": 18.5601,
       "lng": -68.3725,
       "date": "2025-02-15",
-      "story": "Released in the warm Caribbean waters off the Dominican Republic.",
       "photo": null,
       "pathFile": "paths/dominican-republic.geojson",
       "driftMeta": {
@@ -52,7 +50,6 @@
       "lat": 17.7465,
       "lng": -64.7035,
       "date": "2024-02-15",
-      "story": "Released in the waters around St. Croix.",
       "photo": null,
       "pathFile": "paths/st-croix.geojson",
       "driftMeta": {
@@ -69,7 +66,6 @@
       "lat": 21.7945,
       "lng": -72.1825,
       "date": "2023-05-15",
-      "story": "Released in the turquoise waters of Turks & Caicos.",
       "photo": null,
       "pathFile": "paths/turks-and-caicos.geojson",
       "driftMeta": {
@@ -86,7 +82,6 @@
       "lat": 4.2105,
       "lng": 73.528,
       "date": "2022-02-15",
-      "story": "Released in the clear waters of the Maldives.",
       "photo": null,
       "pathFile": "paths/maldives.geojson",
       "driftMeta": {
@@ -103,7 +98,6 @@
       "lat": 25.0865,
       "lng": -80.4473,
       "date": "2021-03-15",
-      "story": "Released in the waters off Key Largo, Florida.",
       "photo": null,
       "pathFile": "paths/key-largo.geojson",
       "driftMeta": {
@@ -120,7 +114,6 @@
       "lat": 36.9517,
       "lng": -122.0267,
       "date": "2019-12-15",
-      "story": "Released in the Pacific off Santa Cruz, California\u2014one winter day by the Monterey Bay.",
       "photo": null,
       "pathFile": "paths/santa-cruz-ca.geojson",
       "driftMeta": {

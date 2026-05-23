@@ -1,5 +1,5 @@
 import '../css/charted-waters.css';
-import { renderChapterCard, renderPositionSummary } from './drift.js';
+import { renderPositionSummary } from './drift.js';
 import { initBottomSheet, initLayout } from './layout.js';
 import { JourneyMap } from './map.js';
 import { renderTimeline, setActiveTimelineCard } from './timeline.js';
@@ -8,7 +8,6 @@ import { loadDrops, loadPath } from './utils.js';
 
 async function main() {
   const positionEl = document.querySelector('[data-position-summary]');
-  const chapterEl = document.querySelector('[data-featured-chapter]');
 
   try {
     const data = await loadDrops();
@@ -24,13 +23,6 @@ async function main() {
 
     if (positionEl) {
       positionEl.innerHTML = renderPositionSummary(latestPath, latest);
-    }
-
-    if (chapterEl) {
-      chapterEl.innerHTML = renderChapterCard(latest, {
-        featured: true,
-        pathProps: latestPath,
-      });
     }
 
     const map = new JourneyMap('map');

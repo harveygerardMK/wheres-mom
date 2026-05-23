@@ -19,26 +19,6 @@ export function renderPositionSummary(pathProps, drop) {
   `;
 }
 
-export function renderChapterCard(drop, { featured = false, pathProps = null } = {}) {
-  const badge = featured ? '<span class="chapter-card__badge">Latest chapter</span>' : '';
-  const driftLine = pathProps
-    ? `<span>↗ ${pathProps.direction} · ~${pathProps.speedKmDay} km/day</span>`
-    : '';
-
-  return `
-    <article class="chapter-card${featured ? ' chapter-card--featured' : ''}">
-      ${badge}
-      <h3>${drop.label}</h3>
-      <p class="chapter-date"><time datetime="${drop.date}">${formatDate(drop.date)}</time> · ${drop.region}</p>
-      <p>${drop.story}</p>
-      <div class="chapter-card__footer">
-        <span>${formatCoords(drop.lat, drop.lng)}</span>
-        ${driftLine}
-      </div>
-    </article>
-  `;
-}
-
 export function renderDropCard(drop, { active = false, pathProps = null } = {}) {
   const driftHint = pathProps ? ` · est. ${pathProps.estimatedRegion}` : '';
 
@@ -48,7 +28,6 @@ export function renderDropCard(drop, { active = false, pathProps = null } = {}) 
       <p class="drop-meta">
         <time datetime="${drop.date}">${formatDate(drop.date)}</time> · ${drop.region}${driftHint}
       </p>
-      <p class="drop-story">${drop.story}</p>
     </button>
   `;
 }
@@ -63,7 +42,6 @@ export function renderDropDetail(drop, pathProps) {
       <h2>${drop.label}</h2>
       <p class="drop-date"><time datetime="${drop.date}">${formatDate(drop.date)}</time> · ${drop.region}</p>
       ${photoBlock}
-      <p>${drop.story}</p>
       ${
         pathProps
           ? `<p><strong>Since this release:</strong> Estimated toward ${pathProps.estimatedRegion}, following the ${pathProps.currentName} (~${pathProps.speedKmDay} km/day ${pathProps.direction}).</p>`
